@@ -1,9 +1,12 @@
 version: 0.2
- install: 
+ 
+phases:
+
+install: 
     commands:
       - go get github.com/JuanValero25/EasyDynamoDB
       - go get github.com/aws/aws-lambda-go/lambda
-phases:
+
   build:
     commands:
       - echo Build started on `date`
