@@ -8,9 +8,6 @@ install:
       - echo GOROOT - $GOROOT
   build:
     commands:
-      - go get ./...
-      - go get github.com/JuanValero25/EasyDynamoDB
-      - go get github.com/aws/aws-lambda-go/lambda
       - go build main.go
   post_build:
     commands:
