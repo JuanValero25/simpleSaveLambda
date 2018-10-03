@@ -16,8 +16,8 @@ phases:
     commands:
 
       # Build our application
-      - go build -o app
+      - go build -o main
 
 artifacts:
   files:
-    - app
+    - main
