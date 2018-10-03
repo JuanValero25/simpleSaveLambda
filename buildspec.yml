@@ -1,17 +1,28 @@
-version: 0.2
- 
+version: 0.1
+            
 phases:
-install: 
+
+  install: 
     commands:
-      - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
-      - echo GOPATH - $GOPATH
-      - echo GOROOT - $GOROOT
+      - go get -u github.com/golang/lint/golint
+      - go get -u github.com/JuanValero25/EasyDynamoDB
+      - go get -u github.com/aws/aws-lambda-go/lambda
+
+  pre_build: 
+    commands:
+
+      # Ensure code passes all lint tests
+      - golint -set_exit_status
+
+      # Run all tests included with our application
+      - go test
+
   build:
     commands:
-      - go build main.go
-  post_build:
-    commands:
-      - echo Build completed on `date`
+
+      # Build our application
+      - go build -o app
+
 artifacts:
   files:
-    - main
+    - app
