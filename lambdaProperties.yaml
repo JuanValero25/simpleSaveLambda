@@ -1,0 +1,6 @@
+ FunctionName:
+       
+        Properties:
+           Handler: main
+           Runtime: Go1.x
+           CodeUri: s3://bucketName/codepackage.zip
