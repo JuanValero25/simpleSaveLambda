@@ -1,9 +1,5 @@
 version: 0.1
 
-        environment_variables:
-          plaintext:
-            PACKAGE: "github.com/JuanValero25/simpleSaveLambda"
-
 phases:
 
   install: 
