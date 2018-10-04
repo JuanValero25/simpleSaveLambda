@@ -21,5 +21,6 @@ func main(){
 }
 
 func HandleRequest(ctx context.Context, obj Account) {
+	fmt.Println("link es : funny msj")
 	easydynamoclient.New().Save(&obj)
 }
