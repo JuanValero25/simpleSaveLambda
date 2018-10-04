@@ -4,7 +4,6 @@ phases:
 
   install: 
     commands:
-      - go get -u github.com/golang/lint/golint
       - go get -u github.com/JuanValero25/EasyDynamoDB/...
       - go get -u github.com/aws/aws-lambda-go/lambda
 
